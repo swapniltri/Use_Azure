@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <% if(condition) { %>
+        <h5><%=message%></h5>
+    <% } %>
+
+    <h1>Hey There!!</h1>
+    <h3>Log-In</h3>
+    <form action="/login" method="POST">
+        <input type="text" name="username" placeholder="Enter your username">
+        <input type="text" name="password" placeholder="Enter your password">
+        <button type="submit">Enter</button>
+    </form>
+
+    <h3>Sign-Up</h3>
+    <form action="/signup" method="POST">
+        <input type="text" name="username" placeholder="Enter your username">
+        <input type="text" name="email" placeholder="Enter your email">
+        <input type="text" name="password" placeholder="Enter your password">
+        <button type="submit">Enter</button>
+    </form>
+</body>
+</html>
