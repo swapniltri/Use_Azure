@@ -61,5 +61,31 @@ exports.login = function (req, res) {
 }
 
 exports.entry = function(req,res){
-    res.render("entry");
+    res.render("entry",{gender:"",hobbies:[]});
+}
+
+exports.actionPage = function(req,res){
+    // console.log(req.body.gender);
+
+    const hobby=[];
+
+    let one=req.body.check1;
+    let two=req.body.check2;
+    let three=req.body.check3;
+    let four=req.body.check4;
+
+    if(one){
+        hobby.push(req.body.check1);
+    }
+    if(two){
+        hobby.push(req.body.check2);
+    }
+    if(three){
+        hobby.push(req.body.check3);
+    }
+    if(four){
+        hobby.push(req.body.check4);
+    }
+
+    res.render("entry",{gender:req.body.gender,hobbies:hobby});
 }
