@@ -8,5 +8,37 @@
 </head>
 <body>
     <h1>Welcome to azure_learn.</h1>
+
+    <form action="/action_page" method="POST">
+        <div>
+            <h3>Select your Gender</h3>
+            <input type="radio" id="male" name="gender" value="Male">
+            <label for="male"> Male</label><br>
+            <input type="radio" id="female" name="gender" value="Female">
+            <label for="female"> Female</label><br>
+        </div>
+        <div>
+            <h3>Select your hobbies</h3>
+            <input type="checkbox" id="run" name="check1" value="Running">
+            <label for="run"> Running</label><br>
+            <input type="checkbox" id="swim" name="check2" value="Swimming">
+            <label for="swim"> Swimming</label><br>
+            <input type="checkbox" id="read" name="check3" value="Reading">
+            <label for="read"> Reading</label><br>
+            <input type="checkbox" id="cook" name="check4" value="Cooking">
+            <label for="cook"> Cooking</label><br>
+        </div>
+        <br>
+        <input type="submit" value="Submit">
+    </form>
+
+    <h3>Gender: <%=gender%></h3>
+    <h3>Hobbies:</h3>
+    <% for(var i=0;i<hobbies.length;i++){ %>
+        <ul>
+            <li><%=hobbies[i]%></li>
+        </ul>
+    <% } %>
+
 </body>
 </html>
